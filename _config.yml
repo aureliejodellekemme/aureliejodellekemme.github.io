@@ -1,39 +1,67 @@
 ###########################################################
-name: "aureliejodellekemme"
-title: "aureliejodellekemme"
-description: "Jekyll template, Meduim styled, for aureliejodellekemme"
-logo: 'assets/images/logo.png'
-baseurl: ''
-googl_analytics: ''
-disqus: ''
-milchimp-list: ''
-include: ["_pages"]
-# Global Configuration (https://jekyllrb.com/docs/configuration/options/)
-###########################################################
-# if you want to force HTTPS, specify the domain without the http at the start
-# set domain: "aureliejodellekemme.github.io"
-domain: ""
+# Site settings
+title: Aurelie Jodelle Kemme
+url: "http://Aurelie-Jodelle.github.io"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
+baseurl: "" # the prefix of your site uri, eg. `"/jekyll-theme-EasyBook"` or empty string `""`
+#timezone: Asia/Chongqing
+description: >
+  Welcome to my website.
 
-# your web site url
-# for GitHub Pages, url: "https://aureliejodellekemme.github.io"
-url: ""
+# Your information
+email: jodelle.kemme@aims-cameroon.org
+author: Aurelie Jodelle Kemme
+avatar: "https://github.com/aureliejodellekemme/Aurelie-Jodelle.github.io/blob/gh-pages/photos/aurelie_portrait.jpg?raw=true"
+profile: I'm a next Einstein Mathematicians and Cameroonian.
+#twitter_username: twitter_username
+#github_username:  github_username
+profile_links:
+  Email: "mailto:jodelle.kemme@aims-cameroon.org"
+  GitHub: "https://github.com/aureliejodellekemme"
+  Linkedin: "https://linkedin.com/in/aurélie-jodelle-kemme-5a0754119"
+  CV: "../documents/CV_Jodelle_Kemme_May.pdf"
+  # You can add more profile links above, or edit _includes/sidebar.html 
 
-# path to this site
-# if your page is located at https://aureliejodellekemme.github.io/blog, then set baseurl: "/blog"
-baseurl: ""
+# Comment Service (Disqus or 多说)
+#  choose one and un-comment the line to active it
+disqus_shortname: personal-website-9uunp9kwad  # get one: https://disqus.com/admin/signup/
+#duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
 
-# please use TZ database name column on the list table
-# https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-#timezone: ""
+excerpt_separator: <!--more-->
 
-###########################################################
-# Front Matter Defaults (https://jekyllrb.com/docs/configuration/front-matter-defaults/)
-###########################################################
+header:
+  links:             # Links on the header. Link to in-site page with a slash as prefix
+    About: /about/
+    Projects: /category/
+  
+    Publications: https://laobubu.net/donate.html
+
+permalink: /archivers/:title
+plugins:
+ - jekyll-paginate
+ - jekyll-gist
+ - jemoji
+
+# Build settings
+paginate: 5
+paginate_path: "page:num"
+
+highlighter: rouge
+markdown: kramdown
+
+# https://jekyllrb.com/docs/configuration/#precedence
 defaults:
-  # for posts
-  - scope:
-      # to separate language posts folders
-      path: "_posts"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  math_engine: mathjax
+
     values:
       layout: "post"
       permalink: /:aureliejodellekemme/
